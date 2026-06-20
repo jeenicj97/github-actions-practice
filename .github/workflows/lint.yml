@@ -14,6 +14,12 @@ jobs:
   code:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          
       - name: Checkout the code/clone the code
         uses: actions/checkout@v7
         
