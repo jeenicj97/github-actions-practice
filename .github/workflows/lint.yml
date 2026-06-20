@@ -1,0 +1,33 @@
+#Lint testing (or linting) is an automated process that scans source code to detect programmatic errors, 
+#bugs, stylistic inconsistencies, and non-compliance with coding standards, without executing the software
+
+#Goal: Whenever someone changes the Python code, 
+#lint will check if the syntax, format, and indentation(Linting) are correct or not.
+
+name: Auto Linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code/clone the code
+        uses: actions/checkout@v7
+        
+      - name: Install Linter
+        run: pip install ruff
+
+      - name: Check the files for linting
+        run: ruff check .
+
+        
+        
+        
+    
+
+
+
+ 
