@@ -2,11 +2,6 @@
 
 from flask import Flask, render_template
 app = Flask(__name__)
-exit1
-
-from flask1
-return noin
-
 
 @app.route('/')
 def hello_world():
